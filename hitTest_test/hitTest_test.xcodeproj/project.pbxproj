@@ -14,6 +14,7 @@
 		62C40AC21B6911B60076B127 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62C40AC11B6911B60076B127 /* Images.xcassets */; };
 		62C40AC51B6911B60076B127 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62C40AC31B6911B60076B127 /* LaunchScreen.xib */; };
 		62C40AD11B6911B60076B127 /* hitTest_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C40AD01B6911B60076B127 /* hitTest_testTests.m */; };
+		62C40ADC1B6912BC0076B127 /* XXBHitTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C40ADB1B6912BC0076B127 /* XXBHitTestView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		62C40ACA1B6911B60076B127 /* hitTest_testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hitTest_testTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62C40ACF1B6911B60076B127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62C40AD01B6911B60076B127 /* hitTest_testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hitTest_testTests.m; sourceTree = "<group>"; };
+		62C40ADA1B6912BC0076B127 /* XXBHitTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXBHitTestView.h; sourceTree = "<group>"; };
+		62C40ADB1B6912BC0076B127 /* XXBHitTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXBHitTestView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				62C40AC11B6911B60076B127 /* Images.xcassets */,
 				62C40AC31B6911B60076B127 /* LaunchScreen.xib */,
 				62C40AB41B6911B60076B127 /* Supporting Files */,
+				62C40ADA1B6912BC0076B127 /* XXBHitTestView.h */,
+				62C40ADB1B6912BC0076B127 /* XXBHitTestView.m */,
 			);
 			path = hitTest_test;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62C40ABD1B6911B60076B127 /* ViewController.m in Sources */,
+				62C40ADC1B6912BC0076B127 /* XXBHitTestView.m in Sources */,
 				62C40ABA1B6911B60076B127 /* AppDelegate.m in Sources */,
 				62C40AB71B6911B60076B127 /* main.m in Sources */,
 			);
@@ -416,6 +422,7 @@
 				62C40AD61B6911B60076B127 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		62C40AD71B6911B60076B127 /* Build configuration list for PBXNativeTarget "hitTest_testTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +431,7 @@
 				62C40AD91B6911B60076B127 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
