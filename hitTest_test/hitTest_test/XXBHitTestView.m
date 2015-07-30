@@ -20,6 +20,8 @@
 
 - (void)p_loadView
 {
+    //检测再view外边的视图是否有事件
+    self.clipsToBounds = YES;
     UIButton *(^makeBtn)(UIImage *,UIImage *,CGRect,NSString*) = ^UIButton *(UIImage *nomalImage,UIImage *highlightedImage,CGRect frame,NSString *string){
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -53,8 +55,7 @@
 }
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {
-    UIView *hitView = nil;
-    //    NSLog(@"point:%@", NSStringFromCGPoint(point));
+    UIView *hitView = [super hitTest:point withEvent:event];
     UIButton *roundBtn = (UIButton *)[self viewWithTag:10000];
     UIButton *leftBtn = (UIButton *)[self viewWithTag:10001];
     UIButton *rightBtn = (UIButton *)[self viewWithTag:10002];
@@ -75,15 +76,21 @@
             {
                 hitView = rightBtn;
             }
-            else
-            {
-                hitView = self;
-            }
+//            else
+//            {
+//                if(CGRectContainsPoint(self.bounds, point))
+//                {
+//                    hitView = self;
+//                }
+//            }
         }
     }
     return hitView;
 }
-
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"点击了view");
+}
 - (BOOL)touchPointInsideCircle:(CGPoint)center radius:(CGFloat)radius targetPoint:(CGPoint)point
 {
     CGFloat dist = sqrtf((point.x - center.x) * (point.x - center.x) +
