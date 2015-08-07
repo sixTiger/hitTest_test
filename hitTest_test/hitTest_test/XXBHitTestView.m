@@ -21,7 +21,6 @@
 - (void)p_loadView
 {
     //检测再view外边的视图是否有事件
-    self.clipsToBounds = YES;
     UIButton *(^makeBtn)(UIImage *,UIImage *,CGRect,NSString*) = ^UIButton *(UIImage *nomalImage,UIImage *highlightedImage,CGRect frame,NSString *string){
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
